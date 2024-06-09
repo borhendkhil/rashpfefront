@@ -1,0 +1,281 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+
+
+  <h4 class="py-3 mb-4">
+    <span class="text-muted fw-light">Gestion de produits /</span> Liste
+  </h4>
+
+  <!-- Product List Widget -->
+
+  <div class="card mb-4">
+    <div class="card-widget-separator-wrapper">
+      <div class="card-body card-widget-separator">
+        <div class="row gy-4 gy-sm-1">
+          <div class="col-sm-6 col-lg-4">
+            <div class="d-flex justify-content-between align-items-start card-widget-1 border-end pb-3 pb-sm-0">
+              <div>
+                <h6 class="mb-2">Vente en magasins</h6>
+                <h4 class="mb-2">5,345.430</h4>
+                <p class="mb-0"><span class="text-muted me-2">5k commandes</span><span
+                  class="badge bg-label-success">+5.7%</span></p>
+              </div>
+              <div class="avatar me-sm-4">
+              <span class="avatar-initial rounded bg-label-secondary">
+                <i class="bx bx-store-alt bx-sm"></i>
+              </span>
+              </div>
+            </div>
+            <hr class="d-none d-sm-block d-lg-none me-4">
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="d-flex justify-content-between align-items-start card-widget-2 border-end pb-3 pb-sm-0">
+              <div>
+                <h6 class="mb-2">Ventes sur notre site</h6>
+                <h4 class="mb-2">674,347.125</h4>
+                <p class="mb-0"><span class="text-muted me-2">21k commandes</span><span class="badge bg-label-success">+12.4%</span>
+                </p>
+              </div>
+              <div class="avatar me-lg-4">
+              <span class="avatar-initial rounded bg-label-secondary">
+                <i class="bx bx-laptop bx-sm"></i>
+              </span>
+              </div>
+            </div>
+            <hr class="d-none d-sm-block d-lg-none">
+          </div>
+          <div class="col-sm-6 col-lg-4">
+            <div class="d-flex justify-content-between align-items-start border-end pb-3 pb-sm-0 card-widget-3">
+              <div>
+                <h6 class="mb-2">Nouveautés</h6>
+                <h4 class="mb-2">32 Articles</h4>
+
+              </div>
+              <div class="avatar me-sm-4">
+              <span class="avatar-initial rounded bg-label-secondary">
+                <i class="bx bx-gift bx-sm"></i>
+              </span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Product List Table -->
+  <div class="card">
+    <div class="card-header">
+      <h5 class="card-title">Filtres</h5>
+      <div class="d-flex justify-content-between align-items-center row py-3 gap-3 gap-md-0">
+        <div class="col-md-3 product_status"><select id="ProductStatus" class="form-select text-capitalize">
+          <option value="">Etat</option>
+          <option value="Publish">Actif</option>
+          <option value="Inactive">Inactif</option>
+        </select></div>
+        <div class="col-md-3 product_category"><select id="ProductCategory" class="form-select text-capitalize">
+          <option value="">Categorie</option>
+          <option value="Household">Smartphone</option>
+          <option value="Office">Tablette</option>
+          <option value="Electronics">Accessoires</option>
+          <option value="Game">Game</option>
+        </select></div>
+        <div class="col-md-3 product_stock"><select id="ProductStock" class="form-select text-capitalize">
+          <option value=""> Marque</option>
+          <option value="Out_of_Stock">Samsung</option>
+          <option value="In_Stock">Xiaomi</option>
+          <option value="In_Stock">Oppo</option>
+        </select></div>
+        <div class="col-md-3 product_stock"><select id="ProductStockC" class="form-select text-capitalize">
+          <option value=""> Couleur</option>
+          <option value="Out_of_Stock">Noir</option>
+          <option value="In_Stock">Blanc</option>
+          <option value="In_Stock">Bleu</option>
+        </select></div>
+      </div>
+    </div>
+    <div class="card-datatable table-responsive">
+      <div id="DataTables_Table_0_wrapper" class="dataTables_wrapper dt-bootstrap5 no-footer">
+        <div class="card-header d-flex border-top rounded-0 flex-wrap py-md-0">
+          <div class="me-5 ms-n2 pe-5">
+            <div id="DataTables_Table_0_filter" class="dataTables_filter"><label><input type="search"
+                                                                                        class="form-control"
+                                                                                        placeholder="Chercher un produit"
+                                                                                        aria-controls="DataTables_Table_0"></label>
+            </div>
+          </div>
+          <div class="d-flex justify-content-start justify-content-md-end align-items-baseline">
+            <div
+              class="dt-action-buttons d-flex align-items-start align-items-md-center justify-content-sm-center mb-3 mb-sm-0">
+              <div class="dataTables_length mt-0 mt-md-3 me-3" id="DataTables_Table_0_length"><label><select
+                name="DataTables_Table_0_length" aria-controls="DataTables_Table_0" class="form-select">
+                <option value="7">5</option>
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="50">50</option>
+                <option value="70">70</option>
+                <option value="100">100</option>
+              </select></label></div>
+              <div class="dt-buttons btn-group flex-wrap d-flex">
+                <div class="btn-group">
+                  <button class="btn buttons-collection dropdown-toggle btn-label-secondary me-3" tabindex="0"
+                          aria-controls="DataTables_Table_0" type="button" aria-haspopup="dialog" aria-expanded="false">
+                    <span><i class="bx bx-export me-1"></i>Exporter</span></button>
+                </div>
+                <button class="btn btn-secondary add-new btn-primary" tabindex="0" aria-controls="DataTables_Table_0"
+                        type="button"><span><i class="bx bx-plus me-0 me-sm-1"></i><span
+                  class="d-none d-sm-inline-block">Ajouter </span></span></button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <table class="datatables-products table border-top dataTable no-footer dtr-column collapsed"
+               id="DataTables_Table_0" aria-describedby="DataTables_Table_0_info" >
+          <thead>
+          <tr>
+           <th class="sorting sorting_asc" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                style="width: 434px;" aria-label="product: activate to sort column descending" aria-sort="ascending">
+              Produit
+            </th>
+            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                style="width: 137px;" aria-label="category: activate to sort column ascending">Categorie
+            </th>
+            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 60px;" aria-label="stock">Marque</th>
+            <th class="sorting_disabled" rowspan="1" colspan="1" style="width: 60px;" aria-label="stock">Couleur</th>
+            <th class="sorting dtr-hidden" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                style="width: 81px; display: none;" aria-label="price: activate to sort column ascending">Prix
+            </th>
+            <th class="sorting" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                style="width: 39px;" aria-label="qty: activate to sort column ascending">Quantité
+            </th>
+            <th class="sorting dtr-hidden" tabindex="0" aria-controls="DataTables_Table_0" rowspan="1" colspan="1"
+                style="width: 103px; display: none;" aria-label="status: activate to sort column ascending">Etat
+            </th>
+            <th class="sorting_disabled dtr-hidden" rowspan="1" colspan="1" style="width: 76px; display: none;"
+                aria-label="Actions">Actions
+            </th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr class="odd">
+            <td class="sorting_1">
+              <div class="d-flex justify-content-start align-items-center product-name">
+                <div class="avatar-wrapper">
+                  <div class="avatar avatar me-2 rounded-2 bg-label-secondary"><img
+                    src="assets/lenovo-tab.jpg" alt="Product-15" class="rounded-2"></div>
+                </div>
+                <div class="d-flex flex-column"><h6 class="text-body text-nowrap mb-0">Tab P12</h6><small
+                  class="text-muted text-truncate d-none d-sm-block">10.2-inch Retina Display, 64GB</small></div>
+              </div>
+            </td>
+            <td class="" style=""><span class="text-truncate d-flex align-items-center"><span
+              class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-primary me-2"><i
+              class="bx bx-mobile-alt"></i></span>Tablette</span></td>
+            <td class="" style=""><span class="text-truncate">Lenovo</span></td>
+            <td class="" style=""><span>Noir</span></td>
+            <td class="dtr-hidden" style="display: none;"><span>800</span></td>
+            <td class="" style=""><span>200</span></td>
+            <td class="dtr-hidden" ><span class="badge bg-label-success" text-capitalized="">Actif</span>
+            </td>
+            <td class="dtr-hidden" style="display: none;">
+              <div class="d-inline-block text-nowrap">
+                <button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button>
+                <button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i
+                  class="bx bx-dots-vertical-rounded me-2"></i></button>
+                <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:0;"
+                                                                    class="dropdown-item">Fiche</a><a
+                  href="javascript:0;" class="dropdown-item">Suspendre</a></div>
+              </div>
+            </td>
+          </tr>
+          <tr class="even">
+            <td class="sorting_1">
+              <div class="d-flex justify-content-start align-items-center product-name">
+                <div class="avatar-wrapper">
+                  <div class="avatar avatar me-2 rounded-2 bg-label-secondary"><img
+                    src="assets/iphone.jpeg" alt="Product-15" class="rounded-2"></div>
+                </div>
+                <div class="d-flex flex-column"><h6 class="text-body text-nowrap mb-0">Iphone 13</h6><small
+                  class="text-muted text-truncate d-none d-sm-block">5.6-inch Retina Display, 128GB</small></div>
+              </div>
+            </td>
+            <td class="" style=""><span class="text-truncate d-flex align-items-center"><span
+              class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-primary me-2"><i
+              class="bx bx-mobile-alt"></i></span>Smartphone</span></td>
+            <td class="" style=""><span class="text-truncate">Apple</span></td>
+            <td class="" style=""><span>Noir</span></td>
+            <td class="dtr-hidden" style="display: none;"><span>3000</span></td>
+            <td class="" style=""><span>50</span></td>
+            <td class="dtr-hidden"><span class="badge bg-label-danger" text-capitalized="">Inactif</span>
+            </td>
+            <td class="dtr-hidden" style="display: none;">
+              <div class="d-inline-block text-nowrap">
+                <button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button>
+                <button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i
+                  class="bx bx-dots-vertical-rounded me-2"></i></button>
+                <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:0;"
+                                                                    class="dropdown-item">Fiche</a><a
+                  href="javascript:0;" class="dropdown-item">Suspendre</a></div>
+              </div>
+            </td>
+          </tr>
+          <tr class="odd">
+            <td class="sorting_1">
+              <div class="d-flex justify-content-start align-items-center product-name">
+                <div class="avatar-wrapper">
+                  <div class="avatar avatar me-2 rounded-2 bg-label-secondary"><img
+                    src="assets/infinix-earbuds.jpg" alt="Product-15" class="rounded-2"></div>
+                </div>
+                <div class="d-flex flex-column"><h6 class="text-body text-nowrap mb-0">IXe 100</h6></div>
+              </div>
+            </td>
+            <td class="" style=""><span class="text-truncate d-flex align-items-center"><span
+              class="avatar-sm rounded-circle d-flex justify-content-center align-items-center bg-label-primary me-2"><i
+              class="bx bx-mobile-alt"></i></span>Accessoires</span></td>
+            <td class="" style=""><span class="text-truncate">Infinix</span></td>
+            <td class="" style=""><span>Noir</span></td>
+            <td class="dtr-hidden" style="display: none;"><span>200</span></td>
+            <td class="" style=""><span>1000</span></td>
+            <td class="dtr-hidden" ><span class="badge bg-label-success" text-capitalized="">Actif</span>
+            </td>
+            <td class="dtr-hidden" style="display: none;">
+              <div class="d-inline-block text-nowrap">
+                <button class="btn btn-sm btn-icon"><i class="bx bx-edit"></i></button>
+                <button class="btn btn-sm btn-icon dropdown-toggle hide-arrow" data-bs-toggle="dropdown"><i
+                  class="bx bx-dots-vertical-rounded me-2"></i></button>
+                <div class="dropdown-menu dropdown-menu-end m-0"><a href="javascript:0;"
+                                                                    class="dropdown-item">Fiche</a><a
+                  href="javascript:0;" class="dropdown-item">Suspendre</a></div>
+              </div>
+            </td>
+          </tr>
+          </tbody>
+        </table>
+        <div class="row mx-2">
+          <div class="col-sm-12 col-md-6">
+            <div class="dataTables_info" id="DataTables_Table_0_info" role="status" aria-live="polite">
+            </div>
+          </div>
+          <div class="col-sm-12 col-md-6">
+            <div class="dataTables_paginate paging_simple_numbers" id="DataTables_Table_0_paginate">
+              <ul class="pagination">
+                <li class="paginate_button page-item previous disabled" id="DataTables_Table_0_previous"><a
+                  aria-controls="DataTables_Table_0" aria-disabled="true" role="link" data-dt-idx="previous"
+                  tabindex="-1" class="page-link">Préc.</a></li>
+                <li class="paginate_button page-item active"><a href="#" aria-controls="DataTables_Table_0" role="link"
+                                                                aria-current="page" data-dt-idx="0" tabindex="0"
+                                                                class="page-link">1</a></li>
+                <li class="paginate_button page-item next disabled" id="DataTables_Table_0_next"><a
+                  aria-controls="DataTables_Table_0" aria-disabled="true" role="link" data-dt-idx="next" tabindex="-1"
+                  class="page-link">Suiv.</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="width: 1%;"></div>
+      </div>
+    </div>
+  </div>
+
+
+</div>

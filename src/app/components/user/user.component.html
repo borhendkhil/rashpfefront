@@ -1,0 +1,50 @@
+<div class="container">
+
+    <main class="table" id="customers_table">
+        <section class="table__header">
+            <h1>Gestion Utilisateurs</h1>
+            <div class="input-group">
+                <input type="search" placeholder="rechercher Utilisateur...">
+
+            </div>
+            <button class="ajoutebtn" [routerLink]="['/ajout']">Ajouter</button>
+            <div class="export__file">
+                <label for="export-file" class="export__file-btn" title="Export File"></label>
+                <input type="checkbox" id="export-file">
+
+            </div>
+        </section>
+        <section class="table__body">
+            <table>
+                <thead>
+                    <tr>
+                        <th> Id </th>
+                        <th> Nom&Prenom </th>
+                        <th> mail </th>
+                        <th>Num Tel </th>
+                        <th> Status </th>
+                        <th> Role </th>
+                        <th> Action </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td> id</td>
+                        <td> username</td>
+                        <td> rashaaabelazi </td>
+                        <td> 28312880 </td>
+                        <td>
+                            <p class="status activé">activé</p>
+                        </td>
+                        <td> <strong> Vendeur</strong></td>
+                        <td><button div class="modifierbtn">Modifier</button></td>
+                    </tr>
+
+
+
+
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>

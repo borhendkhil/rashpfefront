@@ -1,0 +1,133 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+  }
+  
+  .container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 2rem;
+  }
+  
+  form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.4rem 0.8rem #0005;
+    max-width: 600px;
+    width: 100%;
+    
+  }
+  
+  h2 {
+    margin-bottom: 1rem;
+    text-align: center;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: #333;
+  }
+  
+  input, select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+  }
+  
+  button {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background-color: #ed1c24;
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  button:hover {
+    background-color: #ed1c24;
+  }
+  
+  .mt-2 {
+    margin-top: 1rem;
+    text-align: center;
+  }
+  
+  @media print {
+    .table, .table__container {
+      overflow: visible;
+      height: auto !important;
+      width: auto !important;
+    }
+  }
+  
+  .table__container {
+    width: 95%;
+    max-height: calc(89% - 1.6rem);
+    background-color: #fffb;
+    margin: 0.8rem auto;
+    border-radius: 0.6rem;
+    overflow: auto;
+    overflow: overlay;
+  }
+  
+  .table__container::-webkit-scrollbar {
+    width: 0.5rem;
+    height: 0.5rem;
+  }
+  
+  .table__container::-webkit-scrollbar-thumb {
+    border-radius: 0.5rem;
+    background-color: #0004;
+    visibility: hidden;
+  }
+  
+  .table__container:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+  }
+  
+  .export__file {
+    position: relative;
+  }
+  
+  .export__file .export__file-btn {
+    display: inline-block;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    transition: 0.2s ease-in-out;
+  }
+  
+  .export__file .export__file-btn:hover {
+    background-color: #fff;
+    transform: scale(1.15);
+    cursor: pointer;
+  }
+  
+  .export__file input {
+    display: none;
+  }
+  
+  .export__file .export__file-options {
+    position: absolute;
+    right: 0;
+    width: 12rem;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    opacity: 0;
+  }  

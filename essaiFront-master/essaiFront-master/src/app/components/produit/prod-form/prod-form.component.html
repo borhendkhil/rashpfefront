@@ -1,0 +1,182 @@
+<div class="container-xxl flex-grow-1 container-p-y">
+
+
+  <h4 class="py-3 mb-4">
+    <span class="text-muted fw-light">Gestion de produits /</span><span> Nouveau produit</span>
+  </h4>
+
+  <div class="app-ecommerce" data-select2-id="19">
+    <!-- Add Product -->
+
+
+    <div class="row" data-select2-id="18">
+
+      <!-- First column-->
+      <div class="col-12 col-lg-8" data-select2-id="32">
+        <!-- Product Information -->
+        <div class="card mb-4">
+          <div class="card-header">
+            <h5 class="card-tile mb-0">Détails produits</h5>
+          </div>
+          <div class="card-body">
+            <div class="row mb-3">
+              <div class="col-sm-9"> <label class="form-label" for="ecommerce-product-name">Désignation</label>
+              <input type="text" class="form-control" id="ecommerce-product-name" placeholder=""
+                     name="productTitle" aria-label="Product title"></div>
+              <div class="col-sm-3"><label class="form-label" for="ecommerce-product-sku">Référence</label>
+                <input type="number" class="form-control" id="ecommerce-product-sku" placeholder="" name="productSku"
+                       aria-label="Product SKU"></div>
+            </div>
+            <div class="row mb-3">
+
+              <div class="col"><label class="form-label" for="ecommerce-product-barcode">Prix</label>
+                <input type="number" class="form-control" id="ecommerce-product-barcode" placeholder="250"
+                       name="productBarcode" aria-label="Product barcode"></div>
+            </div>
+            <!-- Description -->
+            <div>
+              <label class="form-label">Description </label>
+              <div class="form-control p-0 pt-1">
+
+                <div class="comment-editor border-0 pb-4 ql-container ql-snow" id="ecommerce-category-description">
+                  <div style="height: 100%" class="ql-editor ql-blank" data-gramm="false" contenteditable="true"
+                       data-placeholder="Product Description"><p><br></p></div>
+
+                </div>
+
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /Product Information -->
+
+        <!-- Variants -->
+        <div class="card mb-4" data-select2-id="31">
+          <div class="card-header">
+            <h5 class="card-title mb-0">Caractéristiques</h5>
+          </div>
+          <div class="card-body" data-select2-id="30">
+            <form class="form-repeater" data-select2-id="29">
+              <div data-repeater-list="group-a" data-select2-id="28">
+                <div data-repeater-item="" data-select2-id="27">
+                  <div class="row" data-select2-id="26">
+
+                    <div class="mb-3 col-4" data-select2-id="25">
+                      <label class="form-label" for="form-repeater-1-1">Thème</label>
+                      <div class="position-relative" data-select2-id="24">
+                       <input class="form-control" value="Ecran"></div>
+                    </div>
+
+                    <div class="mb-3 col-4">
+                      <label class="form-label" for="form-repeater-1-2">Caractéristique</label>
+                      <input type="number" id="form-repeater-1-2" class="form-control" placeholder="">
+                    </div>
+                    <div class="mb-3 col-4">
+                      <label class="form-label" for="form-repeater-1-2">Valeur</label>
+                      <input type="number" id="form-repeater-1-2" class="form-control" placeholder="">
+                    </div>
+
+                  </div>
+
+
+                </div>
+
+
+              </div>
+              <div>
+                <button class="btn btn-primary" data-repeater-create="">
+                  Ajouter
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+        <!-- /Variants -->
+
+      </div>
+      <!-- /Second column -->
+
+      <!-- Second column -->
+      <div class="col-12 col-lg-4" data-select2-id="17">
+        <!-- Pricing Card -->
+
+        <div class="card mb-4">
+          <div class="card-header d-flex justify-content-between align-items-center">
+            <h5 class="mb-0 card-title">Image</h5>
+
+          </div>
+          <div class="card-body">
+            <form action="/upload" class="dropzone needsclick dz-clickable" id="dropzone-basic">
+              <div class="dz-message needsclick my-5">
+                <p class="fs-4 note needsclick my-2">Glissez et déposez votre image ici</p>
+                <small class="text-muted d-block fs-6 my-2">ou</small>
+                <span class="note needsclick btn bg-label-primary d-inline" id="btnBrowse">Parcourir</span>
+              </div>
+
+            </form>
+          </div>
+        </div>
+        <!-- /Pricing Card -->
+        <!-- Organize Card -->
+
+        <div class="card mb-4">
+
+          <div class="card-body" data-select2-id="16">
+            <!-- Vendor -->
+            <div class="mb-3 col ecommerce-select2-dropdown" data-select2-id="15">
+              <label class="form-label mb-1 d-flex justify-content-between align-items-center" for="vendor">
+                <span>Marque</span> <a href="javascript:void(0);" class="fw-medium">Nouvelle marque</a>
+              </label>
+              <div class="position-relative" data-select2-id="14"><select id="vendor"
+                                                                          class="select2 form-select select2-hidden-accessible"
+                                                                          data-placeholder="" tabindex="-1"
+                                                                          aria-hidden="true" data-select2-id="vendor">
+                <option value="" data-select2-id="498"></option>
+                <option value="men-clothing">Men's Clothing</option>
+                <option value="women-clothing">Women's-clothing</option>
+                <option value="kid-clothing">Kid's-clothing</option>
+              </select></div>
+            </div>
+            <!-- Category -->
+            <div class="mb-3 col ecommerce-select2-dropdown">
+              <label class="form-label mb-1 d-flex justify-content-between align-items-center" for="category-org">
+                <span>Categorie</span><a href="javascript:void(0);" class="fw-medium">Nouvelle catégorie</a>
+              </label>
+              <div class="position-relative"><select id="category-org"
+                                                     class="select2 form-select select2-hidden-accessible"
+                                                     data-placeholder="Select Category" tabindex="-1" aria-hidden="true"
+                                                     data-select2-id="category-org">
+                <option value="" data-select2-id="506"></option>
+                <option value="Household">Household</option>
+                <option value="Management">Management</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Office">Office</option>
+                <option value="Automotive">Automotive</option>
+              </select></div>
+            </div>
+            <!-- Collection -->
+            <div class="mb-3 col ecommerce-select2-dropdown">
+              <label class="form-label mb-1" for="collection">Couleur
+              </label>
+              <div class="position-relative"><select id="collection"
+                                                     class="select2 form-select select2-hidden-accessible"
+                                                     data-placeholder="Collection" tabindex="-1" aria-hidden="true"
+                                                     data-select2-id="collection">
+                <option value="" data-select2-id="512"></option>
+                <option value="men-clothing">Men's Clothing</option>
+                <option value="women-clothing">Women's-clothing</option>
+                <option value="kid-clothing">Kid's-clothing</option>
+              </select></div>
+            </div>
+            <!-- Status -->
+
+            <!-- Tags -->
+
+          </div>
+        </div>
+        <!-- /Organize Card -->
+      </div>
+      <!-- /Second column -->
+    </div>
+  </div>
+</div>
