@@ -12,7 +12,7 @@ export class AuthService {
   constructor(private http: HttpClient) {}
 
   public getToken(): string | null {
-    return localStorage.getItem('authToken');
+    return localStorage.getItem('accessToken');
   }
 
   public login(username: string, password: string): Observable<any> {
@@ -20,7 +20,7 @@ export class AuthService {
 
     return this.http.post<any>(this.loginUrl, body).pipe(
       tap(response => {
-        localStorage.setItem('authToken', response.token);
+        localStorage.setItem('accessToken', response.accessToken);
       })
     );
   }

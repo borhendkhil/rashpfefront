@@ -21,18 +21,22 @@ export class CommandeComponent implements OnInit {
     this.commandeService.getAllCommandes().subscribe(
       response => {
         this.commandes = response;
+        console.log('Commandes récupérées', this.commandes);
       },
       error => {
         console.error('Erreur lors de la récupération des commandes', error);
       }
     );
   }
+  getToken(): string | null {
+    return localStorage.getItem('accessToken');
+  }
 
-  validerCommande(id: number): void {
-    this.commandeService.validerCommande(id).subscribe(
+  validerCommande(id: number ): void {
+    this.commandeService.validerCommande(this.getToken(),id).subscribe(
       () => {
         console.log('Commande validée avec succès');
-        // Recharger la liste des commandes après la validation
+        
         this.getAllCommandes();
       },
       error => {
@@ -40,4 +44,6 @@ export class CommandeComponent implements OnInit {
       }
     );
   }
+  
+
 }

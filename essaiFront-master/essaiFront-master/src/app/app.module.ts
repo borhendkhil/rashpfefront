@@ -6,6 +6,7 @@ import { HTTP_INTERCEPTORS, HttpClient, HttpClientModule } from '@angular/common
 import { RoleService } from './services/role.service';
 import { LoginModule } from './components/login/login.module';
 import { AuthInterceptor } from './services/auth.interseptor';
+import { UserComponent } from './components/user/user.component';
 @NgModule({
   declarations: [
     AppComponent
@@ -23,6 +24,7 @@ import { AuthInterceptor } from './services/auth.interseptor';
     BrowserModule,  
     AppRoutingModule,
     HttpClientModule,
+    
     LoginModule
 
   ],

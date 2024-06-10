@@ -26,24 +26,26 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>  </td>
-                        <td> </td>
-                        <td>  </td>
-                        <td>  </td>
-                        <td></td>
+                    <tr *ngFor="let commande of commandes">
+                        <td> {{ commande.idcmd }} </td>
+                        <td> {{ commande.numtransac }} </td>
+                        <td> {{ commande.datecmd}} </td>
+                        <td> {{ commande.nbarticle }} </td>
+                        <td> {{ commande.totalcmd }} </td>
                         <td>
-                            <p class="status activé">valider</p>
+                            
+                            
+                             <button class="status activé" (click)="validerCommande(commande.idcmd)">Valider</button>
+
+                            
+                            
                         </td>
                         
-                        
                     </tr>
-
-
-
-
                 </tbody>
             </table>
+           
+           
         </section>
     </main>
 </div>

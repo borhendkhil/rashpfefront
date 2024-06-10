@@ -109,6 +109,11 @@
   .table__.container:hover::-webkit-scrollbar-thumb{ 
     visibility: visible;
   }
+
+  .table__body::-webkit-scrollbar-track{
+    border-radius: .5rem;
+    background-color: #0001;
+  }
   
   
   table {

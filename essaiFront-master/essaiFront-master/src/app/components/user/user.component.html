@@ -28,23 +28,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td> id</td>
-                        <td> username</td>
-                        <td> rashaaabelazi </td>
-                        <td> 28312880 </td>
+                    <tr *ngFor="let user of users">
+                        <td> {{ user.id }}</td>
+                        <td> {{ user.username }}</td>
+                        <td> {{ user.email }} </td>
+                        <td> {{ user.phoneNumber }} </td>
                         <td>
-                            <p class="status activé">activé</p>
+                            <p class="status {{ user.status }}">{{ user.status }}</p>
                         </td>
-                        <td> <strong> Vendeur</strong></td>
+                        <td> <strong> {{ user.role }}</strong></td>
                         <td><button div class="modifierbtn">Modifier</button></td>
                     </tr>
-
-
-
-
                 </tbody>
             </table>
+            
         </section>
     </main>
 </div>

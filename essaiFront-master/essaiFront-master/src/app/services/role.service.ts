@@ -17,10 +17,10 @@ export class RoleService {
   // getServiceUrl() {
   //   return this.baseUrl;
   // }
-  createRole(role: Role): Observable<Role> {
+  createRole(role: Role, token: string): Observable<Role> {
     let queryParams = new HttpParams();
     queryParams = queryParams.set('label', role.label);
-    return this.http.post<Role>(this.baseUrl + "/add", role);
+    return this.http.post<Role>(this.baseUrl + "/add", role, { headers: { 'Authorization': `Bearer ${token}` } });
   }
 
   updateRole(roleId: any, updatedRole: Role): Observable<Role> {

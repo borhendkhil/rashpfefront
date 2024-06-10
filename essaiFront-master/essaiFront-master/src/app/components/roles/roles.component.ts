@@ -1,6 +1,7 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Role } from 'src/app/models/role';
 import { RoleService } from 'src/app/services/role.service';
+import { HttpClient } from '@angular/common/http'; // Import HttpClient
 
 @Component({
   selector: 'app-roles',
@@ -12,7 +13,7 @@ export class RolesComponent implements OnInit, OnDestroy {
   roles: Role[]
   role: Role
 
-  constructor(private roleService: RoleService) { }
+  constructor(private roleService: RoleService,private http: HttpClient) { }
 
   ngOnInit(): void {
     this.roleService.getRoles().subscribe(roles => {
@@ -26,9 +27,12 @@ export class RolesComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
 
   }
+  getToken(): string | null {
+    return localStorage.getItem('accessToken');
+  }
 
   addRole() {
-    this.roleService.createRole(this.role).subscribe(
+    this.roleService.createRole(this.role,this.getToken()).subscribe(
       (data: Role) => {
         this.roles.push(data);
       },

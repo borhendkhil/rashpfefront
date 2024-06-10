@@ -9,19 +9,23 @@ import { Commande } from '../models/commande'; // Assurez-vous que le chemin est
 })
 export class CommandeService {
 
-  private apiUrl = environment.apiUrl; // URL de base de votre API
+  private apiUrl = environment.apiUrl; 
 
   constructor(private http: HttpClient) { }
 
   getAllCommandes(): Observable<Commande[]> {
-    return this.http.get<Commande[]>(`${this.apiUrl}/api/v1/commande`);
+    return this.http.get<Commande[]>(`${this.apiUrl}/commande`);
   }
 
-  validerCommande(id: number): Observable<void> {
-    return this.http.put<void>(`${this.apiUrl}/api/v1/commande/commande/valider/${id}`, {});
+  validerCommande(token: string, id: number): Observable<void> {
+    return this.http.put<void>(`${this.apiUrl}/commande/commande/valider/${id}`, {}, {
+      headers: {
+        Authorization: `Bearer ${token}`
+      }
+    });
   }
 
   getCommandeById(id: number): Observable<Commande> {
-    return this.http.get<Commande>(`${this.apiUrl}/api/v1/commande/commande/${id}`);
+    return this.http.get<Commande>(`${this.apiUrl}/commande/commande/${id}`);
   }
 }
